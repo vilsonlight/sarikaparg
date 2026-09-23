@@ -18,7 +18,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Sarikapärjad üle Eesti | Sarikaparg.ee</title>
+    <title>Sarikapärjad sarikapeoks üle Eesti | Sarikaparg.ee</title>
 
     <meta
       name="description"
@@ -115,6 +115,66 @@
         ]
       }
     </script>
+
+    <style>
+      .clients-section {
+        padding: 42px 20px 48px;
+        background: #ffffff;
+      }
+
+      .clients-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .clients-container h2 {
+        margin: 0 0 28px;
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.7rem, 3vw, 2.3rem);
+        font-weight: 600;
+      }
+
+      .clients-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .client-logo {
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        background: #ffffff;
+        border: 1px solid #e6e3dc;
+        border-radius: 14px;
+      }
+
+      .client-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      @media (max-width: 640px) {
+        .clients-section {
+          padding: 34px 16px 40px;
+        }
+
+        .clients-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 14px;
+        }
+
+        .client-logo {
+          padding: 14px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -174,6 +234,58 @@
           Sarikapärjad tähistavad olulist hetke ehitusprotsessis ning on
           traditsiooniline tänuavaldus ehitajatele tehtud töö eest.
         </p>
+      </div>
+    </section>
+
+    <section class="clients-section" aria-labelledby="clients-title">
+      <div class="clients-container">
+        <h2 id="clients-title">Meilt on sarikapärgi tellinud</h2>
+
+        <div class="clients-grid">
+          <div class="client-logo">
+            <img src="/images/merko.png" alt="Merko logo" loading="lazy" />
+          </div>
+
+          <div class="client-logo">
+            <img src="/images/majo.png" alt="Majo logo" loading="lazy" />
+          </div>
+
+          <div class="client-logo">
+            <img
+              src="/images/nordecon.png"
+              alt="Nordecon logo"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="client-logo">
+            <img src="/images/pinered.png" alt="Pinered logo" loading="lazy" />
+          </div>
+
+          <div class="client-logo">
+            <img src="/images/mapri.png" alt="Mapri logo" loading="lazy" />
+          </div>
+
+          <div class="client-logo">
+            <img src="/images/nobe.png" alt="NOBE logo" loading="lazy" />
+          </div>
+
+          <div class="client-logo">
+            <img
+              src="/images/savekate.png"
+              alt="Savekate logo"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="client-logo">
+            <img
+              src="/images/combicon.png"
+              alt="Combicon logo"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -240,7 +352,7 @@
 
       <div class="hello-row hello-reverse">
         <div class="hello-text">
-          <h2>Hind ja tellimine</h2>
+          <h2>Sarikapärja hind ja tellimine</h2>
 
           <p>
             <strong>Sarikapärjade läbimõõt: 80 cm</strong><br />
