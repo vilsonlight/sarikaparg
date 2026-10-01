@@ -385,7 +385,7 @@
       <h2>Sarikapärja tellimine</h2>
 
       <form action="https://formspree.io/f/xkopbzkl" method="POST">
-        <label for="name">1. Tellija nimi</label>
+        <label for="name">1. Tellija nimi või ettevõte</label>
         <input type="text" id="name" name="nimi" required />
 
         <label for="phone">2. Tellija telefoni number</label>
@@ -434,6 +434,14 @@
 
         <label for="date">7. Soovitud kuupäev</label>
         <input type="date" id="date" name="soovitud_kuupaev" required />
+
+        <label for="time">8. Soovitud kellavahemik</label>
+        <select id="time" name="soovitud_kellavahemik" required>
+          <option value="">Vali kellavahemik</option>
+          <option value="9.00–11.00">9.00–11.00</option>
+          <option value="12.00–14.00">12.00–14.00</option>
+          <option value="15.00–17.00">15.00–17.00</option>
+        </select>
 
         <p class="time-note">
           Täpne kohaletoimetamise või üleandmise kellaaeg lepitakse pärast
@@ -666,6 +674,35 @@
         } catch (error) {
           aadressiValikud.innerHTML = "";
           console.error("Aadressiotsing ebaõnnestus:", error);
+        }
+      });
+    </script>
+    <script>
+      const orderForm = document.querySelector("#orderForm form");
+      const formMessage = document.getElementById("formMessage");
+
+      orderForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(orderForm);
+
+        try {
+          const response = await fetch(orderForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            orderForm.reset();
+            formMessage.style.display = "block";
+          } else {
+            alert("Tellimuse saatmisel tekkis viga. Palun proovige uuesti.");
+          }
+        } catch (error) {
+          alert("Tellimuse saatmisel tekkis viga. Palun proovige uuesti.");
         }
       });
     </script>
