@@ -359,8 +359,15 @@
           <h2>Sarikapärja hind ja tellimine</h2>
 
           <p>
-            <strong>Sarikapärjade läbimõõt: 80 cm</strong><br />
-            <strong>Hind: 65 €</strong>
+            <strong>Standard – Ø80 cm · 65 €</strong><br />
+            <strong>Suur – Ø100 cm · 100 €</strong>
+          </p>
+
+          <p>
+            Standardmõõdus sarikapärg sobib hästi eramutele ja väiksematele
+            ehitusobjektidele. Suurem, 100 cm läbimõõduga sarikapärg on
+            esinduslik valik kõrgetele hoonetele ja suurematele
+            ehitusobjektidele, kus pärg paistab paremini silma ka kaugemalt.
           </p>
 
           <p>
@@ -394,14 +401,25 @@
         <label for="email">3. Tellija e-mail</label>
         <input type="email" id="email" name="email" required />
 
-        <label for="product">4. Toode</label>
-        <input
-          type="text"
-          id="product"
-          name="toode"
-          value="Sarikapärg Ø80 cm – 65 €"
-          readonly
-        />
+        <label>4. Toode</label>
+
+        <div class="payment-options">
+          <label>
+            <input
+              type="radio"
+              name="toode"
+              value="Standard – Ø80 cm – 65 €"
+              required
+              checked
+            />
+            Standard – Ø80 cm – 65 €
+          </label>
+
+          <label>
+            <input type="radio" name="toode" value="Suur – Ø100 cm – 100 €" />
+            Suur – Ø100 cm – 100 €
+          </label>
+        </div>
 
         <label for="delivery">5. Kättesaamise viis</label>
         <select id="delivery" name="kattesaamise_viis" required>
@@ -483,13 +501,20 @@
         <summary>Sarikapärjade hind ja mõõt</summary>
 
         <div class="details-content">
-          <p>Sarikaparg.ee sarikapärjad on läbimõõduga 80 cm.</p>
-
-          <p>Sarikapärjade hind on 65 €.</p>
+          <p>Sarikapärgi valmistame kahes suuruses:</p>
 
           <p>
-            Pärg sobib hästi sarikapeoks eramule, kortermajale, ärihoonele või
-            suuremale ehitusobjektile.
+            <strong>Standard – Ø80 cm · 65 €</strong><br />
+            Klassikaline sarikapärg, mis sobib hästi eramutele, väiksematele
+            kortermajadele ja ehitusobjektidele.
+          </p>
+
+          <p>
+            <strong>Suur – Ø100 cm · 100 €</strong><br />
+            Suurem ja esinduslikum sarikapärg, mis sobib eriti hästi kõrgetele
+            hoonetele, suurematele kortermajadele ja ärihoonetele. Suurem
+            läbimõõt tagab parema nähtavuse ka kaugemalt ning mõjub suurel
+            ehitusobjektil proportsionaalsemalt.
           </p>
         </div>
       </details>
