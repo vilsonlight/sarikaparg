@@ -1076,3 +1076,8 @@ section {
   opacity: 1;
   text-decoration: underline;
 }
+/* TASUTA TARNE – BOLD */
+.intro-container .intro-delivery {
+  font-weight: 700;
+  color: #54734e;
+}
